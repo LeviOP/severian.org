@@ -1,0 +1,101 @@
+<html><head>
+<title>Severian's Torture Chamber - Map Cycle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body vlink="#FF6666" text="#FFFFFF" link="#FF3333" bgcolor="#663333" background="wet_wall05.gif" alink="#FFFF00">
+<table width="100%" border="0">
+  <tbody><tr> 
+    <td width="75%"> <font size="+2" face="Verdana, Arial, Helvetica, sans-serif"><b>Severian's 
+      Half-Life Mod</b></font></td>
+    <td width="25%"><font face="Verdana, Arial, Helvetica, sans-serif"><b><a href="/severian.org/"><img src="abutton1.gif" width="32" hspace="6" height="32" border="0" align="absmiddle"></a><font size="-1"><a href="/severian.org/">Home</a></font></b></font> 
+    </td>
+  </tr>
+</tbody></table>
+<hr>
+<p> I have modified the standard half-life server code (without requiring any 
+  client changes) as follows:</p>
+<ol>
+  <li>Identification of other players when aiming at them (name and model). </li>
+  <li>Map information, remaining time, and frag limit displayed when you die. 
+  </li>
+  <li>Gluon guns don't aim properly and leak radiation (killing those who use 
+    them, eventually). </li>
+  <li>Full clip (50) on machine gun acquisition. </li>
+  <li>Faster shotgun reload and pump time. </li>
+  <li>Faster crossbow reload. </li>
+  <li>Really bright flashlight (you glow intensely). Cool to die with it on!</li>
+  <li>Ability to control the weapons &amp; ammo that players spawn with.</li>
+  <li>Invulnerability for one second after spawn (you don't take damage).</li>
+  <li>Alternate mode for tripmine: places a "lightning" mine which does 
+    150% damage.</li>
+  <li>Alternate fire for grenades: throws them like MP5 grenades (limited to once 
+    every 5 seconds.)</li>
+  <li>Alternate fire for snarks: teleports you to a random spawn location (limited 
+    to once every 5 minutes.)</li>
+  <li>Alternate fire for the crowbar: sends a taunt to all players.</li>
+  <li>Snarks use the "chumtoad" model, and really scream. (Thanks, Kill_Fodder!)</li>
+</ol>
+<p>My modifications are available to download for <a href="http://www2.cerious.com/binaries/halflife/sevmod.zip">Win32</a> 
+  and (hopefully soon!) for Linux.</p>
+<h2><b><font color="#FFFF00">Installation</font></b></h2>
+<p>1. Download and unzip the file for Win32 or Linux (coming soon). Place the 
+  .dll or .so file in your \halflife\valve\dlls folder.</p>
+<p>2. Edit (using Notepad or whatever) the "liblist.gam" file (in the 
+  halflife\valve folder) and change the gamedll line to specify:<br>
+</p>
+<ul>
+  <li> gamedll "dlls\sev.dll"</li>
+</ul>
+<p>If you're on Linux, you'll need to modify the gamedll_linux line instead, to 
+  be:</p>
+<ul>
+  <li>gamedll_linux "dlls/sev_i386.so</li>
+</ul>
+<p>(This will be available soon. I've got to find the time to compile my modifications 
+  for Linux..)<br>
+</p>
+<h2><font color="#FFFF00">Configuration</font></h2>
+<p>You can control the message that is displayed when players die by creating/editing 
+  a "server.txt" file in the Valve folder. Just put the info that you 
+  want to display in this file.</p>
+<p>You can modify the weapons and ammo given when spawning using the following 
+  CVARs, which are unique to my mod. You can set values for these in autoexec.cfg, 
+  server.cfg, or (using Gamehost) in the parameters for starting the server:</p>
+<p>1. mp_giveweapons. For a default Half-Life server, the default value is "weapon_9mmhandgun;weapon_crowbar". 
+  Additional weapons that you can add (or replace) in this list are:</p>
+<ul>
+  <li>weapon_shotgun</li>
+  <li>weapon_9mmAR</li>
+  <li>weapon_357</li>
+  <li>weapon_gauss</li>
+  <li>weapon_rpg</li>
+  <li>weapon_crossbow</li>
+  <li>weapon_egon</li>
+  <li>weapon_tripmine</li>
+  <li>weapon_satchel</li>
+  <li>weapon_handgrenade</li>
+  <li>weapon_snark</li>
+  <li>weapon_hornetgun</li>
+</ul>
+<p>2. mp_giveammo. For a default Half-Life server, the value is "9mm:68", 
+  which provides 68 bullets for the 9mm handgun. You can specify additional "given" 
+  ammo using the following names:</p>
+<ul>
+  <li>bolts - Crossbow bolts</li>
+  <li>ARgrenades - MP5 grenades</li>
+  <li>357 - Magnum bullets</li>
+  <li>rockets - RPG rockets</li>
+  <li>uranium - Gauss/Egon ammo</li>
+  <li>buckshot - Shotgun shells</li>
+</ul>
+<p>For a default Half-Life server, the value is "9mm:68". If you want 
+  to give 200 bullets, 50 bolts, 80 units of uranium. 5 RPG rockets amd 12 shotgun 
+  shells, the value would be:</p>
+<ul>
+  <li>9mm:200;bolts:50;uranium:80;rockets:5;buckshot:12</li>
+</ul>
+<p>&nbsp;</p>
+
+
+</body></html>
